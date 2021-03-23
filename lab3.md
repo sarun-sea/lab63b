@@ -19,7 +19,34 @@
   ![image](https://user-images.githubusercontent.com/80879942/112137666-1e88bb80-8c03-11eb-866b-b516ad5036b6.jpg)
  
  2 ทำการเขียนโปรแกรม 
-    -โปรแกรมทำการเริ่มต้นที่ 0 โดยวนลูปด้วยคำสั่ง delay(500) ซึ่งหมายถึง 500 มิลลิเซค
+ ```javascript
+ #include <Arduino.h>
+#include <ESP8266WiFi.h>
+
+int cnt = 0;
+
+void setup()
+{
+	Serial.begin(115200);
+	pinMode(0, OUTPUT);
+	Serial.println("\n\n\n");
+}
+
+void loop()
+{
+	cnt++;
+	if(cnt % 2) {
+		Serial.println("========== ON ===========");
+		digitalWrite(0, HIGH);
+	} else {
+		Serial.println("========== OFF ===========");
+		digitalWrite(0, LOW);
+	}
+	delay(500);
+}
+```
+    
+   -โปรแกรมทำการเริ่มต้นที่ 0 โดยวนลูปด้วยคำสั่ง delay(500) ซึ่งหมายถึง 500 มิลลิเซค
     -คำสั่ง cnt++ คือการนับเลขไปเรื่อยโดยกำหนดเงื่อนไข if(cnt%2) หมายถึงหากตัวเลขเป็นเลขคี่ ให้ on แต่หากไม่ใช่ก็คือจะเปน off
     
     
