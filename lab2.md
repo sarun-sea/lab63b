@@ -24,7 +24,7 @@
  ![image](https://user-images.githubusercontent.com/80879678/112092640-8242c280-8bca-11eb-8907-0a1be8c000f2.jpg)
  * โค้ดที่ใช้ในการเขียนโปรแกรม
  
-javascript   
+```javascript   
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 
@@ -58,7 +58,7 @@ void loop()
  }
  Serial.println("\n\n");
 }
-  
+```  
 
 # การบันทึกผล
 เมื่ออัปโหลดเสร็จจะมีส่วนset upที่เซ็ตไวไฟให้พร้อมทำงานส่วนลูปคือวนลูปตลอดไป
