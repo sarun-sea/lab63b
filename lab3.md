@@ -2,13 +2,16 @@
 ## วัตถุประสงค์ของการทดลอง
   1 เพื่อศึกษาการทำงานของ microcontroller Esp-01 
   2 เพื่อให้สามารถเขียนโปรแกรมและรัน microcontroller ที่ต่อกับ adapter และให้มี output ออกมาภายนอกได้
+  3 เพื่อศึกษาหน้าที่ของ Relay
 ## อุปกรณ์ที่ใช้
   1 microcontroller ESP-01
   2 อุปกรณ์ต่อ USB กับ microcontroller
   3 adapter ที่ต่อกับ microcontroller
   4 LED
+  5 Relay
 ## ศึกษาข้อมมูลเบื้องต้น
 แหล่งข้อมูล https://www.youtube.com/watch?v=CCnN1WJsXQY
+          https://www.youtube.com/watch?v=6JnhaUILGuw
 ## วิธีทำการทดลอง
   1 นำ adapter ที่มีคอร์ด 0(สีขาว) กับ 1(สีเหลือง) ต่อเข้ากับ USB seriel port และนำ microcontroller มาต่อเข้ากับตัว adapter อีกที
   
@@ -29,6 +32,11 @@
 
     
    -เมื่ออํปโลหดเสร็จให้ใช้คำสั่ง pio device monitor เพื่อดูผล
+   
+   -หลังจากเกิดผลแล้วนำ microcontroller มาต่อเข้ากับตัว Relay เพื่อให้ตัวรีเลย์ทำหน้าที่เปิด-ปิดสวิตซ์ แล้วนำแหล่งจ่ายไฟมาต่อเข้ากับตัว Relay เพื่อจ่ายไฟให้รีเลย์ทำงานได้
+   
+   
+   
    
     
 ## การบันทึกผลการทดลอง
