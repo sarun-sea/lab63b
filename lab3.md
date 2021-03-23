@@ -23,7 +23,7 @@
   ![image](https://user-images.githubusercontent.com/80879942/112139226-1c276100-8c05-11eb-9b71-6711fb943ae2.jpg)
 
    -ทำการรันโดยคำสั่ง pio run -t upload
-   -กด reset เพื่อทำการอัปโหลดโปรแกรมไปยัง microcontroller
+   -กด reset เพื่อทำการอัปโหลดโปรแกรมไปยัง microcontroller จะได้หน้าต่างที่มีกำลัง upload ตามรูป
     
    ![image](https://user-images.githubusercontent.com/80879942/112140260-5e9d6d80-8c06-11eb-9a5d-70b1e3322553.jpg)
 
