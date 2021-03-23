@@ -20,14 +20,14 @@
     -คำสั่ง cnt++ คือการนับเลขไปเรื่อยโดยกำหนดเงื่อนไข if(cnt%2) หมายถึงหากตัวเลขเป็นเลขคี่ ให้ on แต่หากไม่ใช่ก็คือจะเปน off
     
     
-    ![image](https://user-images.githubusercontent.com/80879942/112139226-1c276100-8c05-11eb-9b71-6711fb943ae2.jpg)
+  ![image](https://user-images.githubusercontent.com/80879942/112139226-1c276100-8c05-11eb-9b71-6711fb943ae2.jpg)
 
-    -ทำการรันโดยคำสั่ง pio run -t upload
-    -กด reset เพื่อทำการอัปโหลดโปรแกรมไปยัง microcontroller
+   -ทำการรันโดยคำสั่ง pio run -t upload
+   -กด reset เพื่อทำการอัปโหลดโปรแกรมไปยัง microcontroller
     
     
     
-    -เมื่ออํปโลหดเสร็จให้ใช้คำสั่ง pio device monitor เพื่อดูผล
+   -เมื่ออํปโลหดเสร็จให้ใช้คำสั่ง pio device monitor เพื่อดูผล
     
 ## การบันทึกผลการทดลอง
    จะได้ผลลัพธ์ออกมาเป็น on off สลับกันไปเรื่อย แล้วไฟ LED เปล่งแสงจะติดดับๆสลับกัน
