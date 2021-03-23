@@ -1,86 +1,75 @@
-# การทดลองที่ 6 เรื่อง การเขียนโปรแกรมสร้างไวไฟแอคเซสพอยต์(Wifi AP)
+# การทดลองที่ 2 เรื่อง การเขียนโปรแกรมค้นหาไวไฟ
 
-# วัตถุประสงค์
-เพื่อเขียนโปรมแกรมที่จะสร้าไวไฟแอคเซสพอยต์ขึ้นมาเองที่จะสามารถนำไวไฟของตัวเองเชื่อมกับอุปกรณือื่น
+# วัตถุปรสงค์
+* 1.เพื่อที่จะรันโปรแกรมบนไมโครคอนโทรลเลอร์ ESP-01 ที่จะค้นหา wifi
 
 # อุปกรณ์ที่ใช้
 * 1.CPU
-* 2.อุปกรณ์ต่อUSB
-* 3.ไมโครคอนโทรเลอร์ESP-01
+* 2.เสาอากาศสำหรับรับไวไฟ
+* 3.อุปกรณ์ต่อUSB
+* 4.ไมโครคอนโทรลเลอร์ESP-01ที่มีไวไฟในตัวเอง
 
 # ศึกษาข้อมูลเบื้องต้น
-* platformio.ini
-* คลิป youtube อาจารย์ https://youtu.be/APdBR37Ukxg
+* จะใช้ข้อมูลจากplatfromio.ini เพื่อดูข้อมูลไมโครคอนโทรเลอร์ ESP-01
+* คลิปการสอนของอาจารย์ https://youtu.be/yBjab0UNuB8
 
-# วิธีการทำการทดลอง
-* 1.กำหนดชื่อและตั้งพาสเวิด
- ![image](https://user-images.githubusercontent.com/80879678/112093962-ea92a380-8bcc-11eb-8b5d-9c367a3b9449.jpg)
-
-* 2.กำหนดIPAdress,gateway,subnet
-![image](https://user-images.githubusercontent.com/80879678/112094552-13676880-8bce-11eb-840f-558fcd636b35.jpg)
-
-* 3.เตรียมเว็บเซิฟเวอร์1ตัว
- ![image](https://user-images.githubusercontent.com/80879678/112094082-32192f80-8bcd-11eb-9905-b37362433e7a.jpg)
-
-* 4.รันคำสั่งsoftAPแล้วกำหนดssiadกับpassword
- ![image](https://user-images.githubusercontent.com/80879678/112094155-537a1b80-8bcd-11eb-9f3f-7429cc1003ca.jpg)
-* 5.อัปโหลดโปรแกรมโดยใช้คำสั่งpio run -t upload
-![image](https://user-images.githubusercontent.com/80879678/112094212-6ee52680-8bcd-11eb-963f-b78ec3414b97.jpg)
-* 6.กดปุ่มรีเซ็ต
- ![image](https://user-images.githubusercontent.com/80879678/112094256-88866e00-8bcd-11eb-8bab-dc64b6cff485.jpg)
-
-* 7.เช็คว่าไวไฟที่สร้างขึ้นนั้นมีจริงมั้ยโดยใช้คำสั่งpio device monitor
- ![image](https://user-images.githubusercontent.com/80879678/112094298-9cca6b00-8bcd-11eb-84ab-2dc865285aca.jpg)
-* 8.ใช็โทรศัพท์มือถือค้นหาไวไฟ
-* โค้ดที่ใช้ในการเขียนโปรแกรมคือ
-javascript
+# วิธีการทดลอง
+* 1.เสียบไมโครคอนโทรลเลอร์ใน USB to serealพอร์ต
+* 2.อัปโหลดโปรแกรมโดยรันคำสั่ง upload
+ ![image](https://user-images.githubusercontent.com/80879678/112092429-0c3e5b80-8bca-11eb-9138-49a05fa33128.jpg)
+* 3.กดปุ่มอัปโหลด
+* 4.กดปุ่มรีเซ็ต
+ ![image](https://user-images.githubusercontent.com/80879678/112092578-62ab9a00-8bca-11eb-853f-540fc48be65c.jpg)
+* 5.เมื่อuploadครบ100%ใช้คำสั่ง pio device monitor
+ ![image](https://user-images.githubusercontent.com/80879678/112092640-8242c280-8bca-11eb-8907-0a1be8c000f2.jpg)
+ * โค้ดที่ใช้ในการเขียนโปรแกรม
+ 
+javascript   
+#include <Arduino.h>
 #include <ESP8266WiFi.h>
-//#include <WiFiClient.h>
-#include <ESP8266WebServer.h>
-
-const char* ssid = "MY-ESP8266";
-const char* password = "choompol";
-
-IPAddress local_ip(192, 168, 1, 1);
-IPAddress gateway(192, 168, 1, 1);
-IPAddress subnet(255, 255, 255, 0);
-
-ESP8266WebServer server(80);
 
 int cnt = 0;
 
-void setup(void){
+void setup()
+{
  Serial.begin(115200);
-
- WiFi.softAP(ssid, password);
- WiFi.softAPConfig(local_ip, gateway, subnet);
+ WiFi.mode(WIFI_STA);
+ WiFi.disconnect();
  delay(100);
-
- server.onNotFound([]() {
-  server.send(404, "text/plain", "Path Not Found");
- });
-
- server.on("/", []() {
-  cnt++;
-  String msg = "Hello cnt: ";
-  msg += cnt;
-  server.send(200, "text/plain", msg);
- });
-
- server.begin();
- Serial.println("HTTP server started");
+ Serial.println("\n\n\n");
 }
 
-void loop(void){
-  server.handleClient();
+void loop()
+{
+ Serial.println("========== เริ่มต้นแสกนหา Wifi ===========");
+ int n = WiFi.scanNetworks();
+ if(n == 0) {
+  Serial.println("NO NETWORK FOUND");
+ } else {
+  for(int i=0; i<n; i++) {
+   Serial.print(i + 1);
+   Serial.print(": ");
+   Serial.print(WiFi.SSID(i));
+   Serial.print(" (");
+   Serial.print(WiFi.RSSI(i));
+   Serial.println(")");
+   delay(10);
+  }
+ }
+ Serial.println("\n\n");
 }
+  
 
-# การบันทึกผลการทดลอง
-สามารถสร้างไวไฟแอคเซสพอยต์ขึ้นมาเองได้ โดยทดลองค้นหาด้วยโทรศัพท์แล้วว่ามีจริง
-![image](https://user-images.githubusercontent.com/80879678/112094339-ad7ae100-8bcd-11eb-98da-a0eb09f63ef6.jpg) 
+# การบันทึกผล
+เมื่ออัปโหลดเสร็จจะมีส่วนset upที่เซ็ตไวไฟให้พร้อมทำงานส่วนลูปคือวนลูปตลอดไป
+แสดงผลเริ่มต้นคือ เริ่มต้นสแกนหาwifi
+จะมีการค้นหา wifiบริเวณนั้น
+![image](https://user-images.githubusercontent.com/80879678/112092782-ca61e500-8bca-11eb-94f7-4198a18f1636.jpg)
 
 # อภิปรายผลการทดลอง
-จากการทดลองนี้เราเขียนโปรแกรมเพื่อที่จะให้ไมโครคอนโทรเลอร์สามารถปล่อยไวไฟจากตัวมันเองออกมาได้และสามารถเชื่อมต่อกับอุปกรณ์อื่น
+* จากการทดลองสามารถค้นหาwifiที่มีสัญญาณอยู่บริเวณนั้นๆได้
+![image](https://user-images.githubusercontent.com/80879678/112092782-ca61e500-8bca-11eb-94f7-4198a18f1636.jpg)
+
 
 # คำถามหลังการทดลอง
   ลองยกตัวอย่างอุปกรณ์เทคโนโลยี ที่มีลักษณะการทำงานคล้ายคลึงกับโปรแกรมนี้
