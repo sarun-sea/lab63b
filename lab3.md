@@ -4,21 +4,21 @@
 2. เพื่อให้สามารถเขียนโปรแกรมและรัน microcontroller ที่ต่อกับ adapter และให้มี output ออกมาภายนอกได้
 3. เพื่อศึกษาหน้าที่ของ Relay
 ## อุปกรณ์ที่ใช้
-  1 microcontroller ESP-01
-  2 อุปกรณ์ต่อ USB กับ microcontroller
-  3 adapter ที่ต่อกับ microcontroller
-  4 LED
-  5 Relay
+  1. microcontroller ESP-01
+  2. อุปกรณ์ต่อ USB กับ microcontroller
+  3. adapter ที่ต่อกับ microcontroller
+  4. LED
+  5. Relay
 ## ศึกษาข้อมมูลเบื้องต้น
 แหล่งข้อมูล https://www.youtube.com/watch?v=CCnN1WJsXQY
           https://www.youtube.com/watch?v=6JnhaUILGuw
 ## วิธีทำการทดลอง
-  1 นำ adapter ที่มีคอร์ด 0(สีขาว) กับ 1(สีเหลือง) ต่อเข้ากับ USB seriel port และนำ microcontroller มาต่อเข้ากับตัว adapter อีกที
+  1. นำ adapter ที่มีคอร์ด 0(สีขาว) กับ 1(สีเหลือง) ต่อเข้ากับ USB seriel port และนำ microcontroller มาต่อเข้ากับตัว adapter อีกที
   
   
   ![image](https://user-images.githubusercontent.com/80879942/112137666-1e88bb80-8c03-11eb-866b-b516ad5036b6.jpg)
  
- 2 ทำการเขียนโปรแกรม 
+ 2. ทำการเขียนโปรแกรม 
  ```javascript
  #include <Arduino.h>
 #include <ESP8266WiFi.h>
@@ -85,8 +85,8 @@ void loop()
  
  
  ## คำถามหลังการทดลอง
-   - หากทำการเปลี่ยน delay ให้มากกว่าเดิมจะเกิดอะไรขึ้น
-   * ตอบ จะทำให้ระยะห่างของเวลาในการติดดับของไฟมากขึ้น
+   หากทำการเปลี่ยน delay ให้มากกว่าเดิมจะเกิดอะไรขึ้น
+    ตอบ จะทำให้ระยะห่างของเวลาในการติดดับของไฟมากขึ้น
    
    
    
