@@ -6,6 +6,7 @@
   1 microcontroller ESP-01
   2 อุปกรณ์ต่อ USB กับ microcontroller
   3 adapter ที่ต่อกับ microcontroller
+  4 LED
 ## ศึกษาข้อมมูลเบื้องต้น
 แหล่งข้อมูล https://www.youtube.com/watch?v=CCnN1WJsXQY
 ## วิธีทำการทดลอง
