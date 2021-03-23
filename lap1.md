@@ -84,4 +84,4 @@ https://www.youtube.com/watch?v=NLIUsWLEpmg
 
 ## คำถามหลังการทดลอง 
 หากต้องการ upload โปรแกรมเข้าไปใน microcontroller จะต้องกดปุ่มใด
--ตอบ ปุ่มดำ
+  - ตอบ ปุ่มดำ
