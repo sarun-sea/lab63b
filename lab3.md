@@ -25,7 +25,8 @@
    -ทำการรันโดยคำสั่ง pio run -t upload
    -กด reset เพื่อทำการอัปโหลดโปรแกรมไปยัง microcontroller
     
-    
+   ![image](https://user-images.githubusercontent.com/80879942/112140260-5e9d6d80-8c06-11eb-9a5d-70b1e3322553.jpg)
+
     
    -เมื่ออํปโลหดเสร็จให้ใช้คำสั่ง pio device monitor เพื่อดูผล
     
