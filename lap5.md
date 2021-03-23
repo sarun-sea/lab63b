@@ -3,10 +3,10 @@
  
  
  ## อุปกรณ์ที่ใช้
-   1 microcontroller EPS-01
-   2 USB ที่ต่อเข้ากับ serial
-   3 CPU 
-   4 wifi ที่ต้องการเชื่อมกับ microcontroller 
+   -1 microcontroller EPS-01
+   -2 USB ที่ต่อเข้ากับ serial
+   -3 CPU 
+   -4 wifi ที่ต้องการเชื่อมกับ microcontroller 
    
    
  ## ศึกษาข้อมูลเบื้องต้น
