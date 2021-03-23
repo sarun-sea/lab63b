@@ -1,8 +1,8 @@
 # การทดลองที่ 3
 ## วัตถุประสงค์ของการทดลอง
-1 เพื่อศึกษาการทำงานของ microcontroller Esp-01 
-2 เพื่อให้สามารถเขียนโปรแกรมและรัน microcontroller ที่ต่อกับ adapter และให้มี output ออกมาภายนอกได้
-3 เพื่อศึกษาหน้าที่ของ Relay
+1. เพื่อศึกษาการทำงานของ microcontroller Esp-01 
+2. เพื่อให้สามารถเขียนโปรแกรมและรัน microcontroller ที่ต่อกับ adapter และให้มี output ออกมาภายนอกได้
+3. เพื่อศึกษาหน้าที่ของ Relay
 ## อุปกรณ์ที่ใช้
   1 microcontroller ESP-01
   2 อุปกรณ์ต่อ USB กับ microcontroller
