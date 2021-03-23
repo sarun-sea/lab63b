@@ -69,7 +69,7 @@ void loop(void){
 4. ทำการ upload โปรแกรมด้วคำสั่ง pio run -t upload ขึ้นไปบนตัว microcontroller 
 5. เสียบ microcontroller เข้าไปที่ USB to serial
 
-
+![image](https://user-images.githubusercontent.com/80879942/112162477-ac25d480-8c1e-11eb-8915-8e6e6ded0e1e.jpg)
 
 7. กด reset เพื่อให้ microcontroller พร้อมที่จะรับข้อมูลโปรแกรม
 8. กด pio device monitor เพื่อที่ดูผลลัพธ์โดยจะขึ้น ip address และนำไปที่บราวเซอร์ในการทดสอบ
