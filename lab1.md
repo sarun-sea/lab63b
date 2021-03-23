@@ -69,14 +69,10 @@ https://www.youtube.com/watch?v=NLIUsWLEpmg
 ![image](https://user-images.githubusercontent.com/80879966/112079589-0721e200-8bb3-11eb-89ac-e9135632f920.jpg)
 
 ## การบันทึกผลการทดลอง 
-  คำสั่ง | ผลลัพธ์ที่แสดง
-  ------------ | -------------
-  src/main.cpp | ผลลัพธ์ของโปรแกรมส่วน set up & loop
-  platformio.ini | ข้อมูลใน configuration file
-  pio run -t upload | รันข้อมูลในตัวอย่าง
-  pio device monitor | PATTANIที่เพิ่มขึ้นใน 1 วินาที
-  การกดปุ่มสีดำ | โปรแกรมถูกโหลด
-  การกดปุ่มสีแดง | โปรแกรมถูกรีเซ็ต
+  -pio run -t upload  คือการรันข้อมูลในตัวอย่าง
+  -pio device monitor เพิ่มขึ้นใน 1 วินาที
+  -การกดปุ่มสีดำ  โปรแกรมถูกโหลด
+  -การกดปุ่มสีแดง  โปรแกรมถูกรีเซ็ต
   
 ## อภิปรายผลการทดลอง 
 - platformio นั้น สามารถใช้เขียนโปรแกรมจาก microcontroller หลายชนิดที่มีบริษัทต่างกันได้ โดย คำสั่ง platformio.ini เป็นเหมือนตัวแสดงผลว่าการเขียนโปรแกรมครั้งนี้เราจะเขียนให้กับ microcontroller ตัวไหน
