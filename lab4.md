@@ -35,7 +35,7 @@ https://www.youtube.com/watch?v=nFqoZT26U5k
       - หากค่าที่อ่านได้ เป็น 0 ให้ HIGH ไปที่ port 2 (หากเป็นหลอดไฟหมายถึงไฟติด)
     โดยในที่นี้หมายความว่า port 0 เป็นตัวควบคุมสัญญาณ input ให้ไฟเปิด หรือ ปิด
     
-javascript
+```javascript
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 
@@ -60,7 +60,7 @@ void loop()
  }
  delay(100);
 }
-
+```
 4. อัพโหลดโปรแกรมเข้าไปใน microcontroller
  - พิมพ์ pio run -t upload
  - ทำการกดปุ่มสีดำ เพื่อให้ทำการอัพโหลดได้
