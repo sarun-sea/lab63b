@@ -13,7 +13,7 @@
 แหล่งข้อมูล https://www.youtube.com/watch?v=CCnN1WJsXQY
           https://www.youtube.com/watch?v=6JnhaUILGuw
 ## วิธีทำการทดลอง
-  1. นำ adapter ที่มีคอร์ด 0(สีขาว) กับ 1(สีเหลือง) ต่อเข้ากับ USB seriel port และนำ microcontroller มาต่อเข้ากับตัว adapter อีกที
+  1. นำ adapter ที่มี port 0(สีขาว) กับ 1(สีเหลือง) ต่อเข้ากับ USB seriel port และนำ microcontroller มาต่อเข้ากับตัว adapter อีกที
   
   
   ![image](https://user-images.githubusercontent.com/80879942/112137666-1e88bb80-8c03-11eb-866b-b516ad5036b6.jpg)
