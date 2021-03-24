@@ -10,7 +10,7 @@
 
 # ศึกษาข้อมูลเบื้องต้น
 * platformio.ini
-* คลิป youtube อาจารย์ https://youtu.be/APdBR37Ukxg
+* https://youtu.be/APdBR37Ukxg
 
 # วิธีการทำการทดลอง
 * 1.กำหนดชื่อและตั้งพาสเวิด
