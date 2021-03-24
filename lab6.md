@@ -33,7 +33,7 @@
  ![image](https://user-images.githubusercontent.com/80879678/112094298-9cca6b00-8bcd-11eb-84ab-2dc865285aca.jpg)
 * 8.ใช็โทรศัพท์มือถือค้นหาไวไฟ
 * โค้ดที่ใช้ในการเขียนโปรแกรมคือ
-javascript
+```javascript
 #include <ESP8266WiFi.h>
 //#include <WiFiClient.h>
 #include <ESP8266WebServer.h>
@@ -74,7 +74,7 @@ void setup(void){
 void loop(void){
   server.handleClient();
 }
-
+```
 # การบันทึกผลการทดลอง
 สามารถสร้างไวไฟแอคเซสพอยต์ขึ้นมาเองได้ โดยทดลองค้นหาด้วยโทรศัพท์แล้วว่ามีจริง
 ![image](https://user-images.githubusercontent.com/80879678/112094339-ad7ae100-8bcd-11eb-98da-a0eb09f63ef6.jpg) 
