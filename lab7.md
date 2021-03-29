@@ -16,7 +16,7 @@
 
 # ศึกษาข้อมูลเบื้องต้น
 -  แหล่งข้อมูล https://www.youtube.com/watch?v=T26DVHePlTs
--            https://www.youtube.com/watch?v=VX-QNQcO-b4
+            https://www.youtube.com/watch?v=VX-QNQcO-b4
 -  แหล่งข้อมูลเพิ่มเติม https://www.youtube.com/watch?v=oyncRBYtKrw
 
 # วิธีการทำการทดลอง
