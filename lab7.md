@@ -142,3 +142,7 @@ void loop(){
 4. ทำการ upload program เพื่อให้ได้เลข ip address มา
 5. นำ microcontroller มาเสียบกลับที่ relay แล้วทำการจ่ายไฟ
 6. นำ ip address ที่ได้ไปใส่ที่ URL ของ web browser 
+
+![image](https://user-images.githubusercontent.com/80879942/112827830-132d0880-90b9-11eb-811d-4fd36f628cb9.jpg)
+
+7 เมื่อทำการกดปุ่ม on 
